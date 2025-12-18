@@ -1,0 +1,92 @@
+/* TripDetails.css */
+.trip-page {
+    min-height: 100vh;
+    background: #e2f5f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .trip-card {
+    width: 90%;
+    max-width: 950px;
+    background: #f7fffd;
+    border-radius: 14px;
+    padding: 30px 40px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.06);
+  }
+  
+  .trip-form .row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+  
+  .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .field label {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  .field input[type="text"],
+  .field input[type="number"],
+  .field input[type="date"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cfd9e0;
+    font-size: 14px;
+  }
+  
+  .members-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .members-input button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #e7f3f3;
+    cursor: pointer;
+  }
+  
+  .members-input input {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .date-range {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .next-btn {
+    padding: 10px 26px;
+    border-radius: 8px;
+    border: none;
+    background: #3bb0a8;
+    color: #fff;
+    cursor: pointer;
+  }
+  
