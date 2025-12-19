@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { FaTwitter } from "react-icons/fa";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +10,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TEMP: backend later
     if (email && password) {
       navigate("/dashboard");
     }
@@ -36,13 +37,41 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="w-full bg-blue-600 text-white p-2 rounded">
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+        >
           Login
         </button>
 
-        <p className="text-sm mt-3 text-center">
+        {/* Divider */}
+        <div className="flex items-center my-4">
+          <hr className="flex-grow border-gray-300" />
+          <span className="mx-2 text-gray-400 text-sm">OR</span>
+          <hr className="flex-grow border-gray-300" />
+        </div>
+
+        {/* Google Button */}
+        <button
+          type="button"
+          className="w-full flex items-center justify-center gap-2 border p-2 rounded mb-2 hover:bg-gray-100"
+        >
+          <FcGoogle size={20} />
+          Continue with Google
+        </button>
+
+        {/* Twitter Button */}
+        <button
+          type="button"
+          className="w-full flex items-center justify-center gap-2 bg-sky-500 text-white p-2 rounded hover:bg-sky-600"
+        >
+          <FaTwitter size={20} />
+          Continue with Twitter
+        </button>
+
+        <p className="text-sm mt-4 text-center">
           No account?{" "}
-          <Link to="/Signup" className="text-blue-600">
+          <Link to="/signup" className="text-blue-600">
             Signup
           </Link>
         </p>
